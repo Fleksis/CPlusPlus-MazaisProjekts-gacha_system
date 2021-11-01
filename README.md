@@ -15,12 +15,27 @@
 
 #### Kā mana gacha simulēšana strādās
 * Sāksim ar to kādi ir rarity veidi:
-- 1star (Viss biežāk sastopams)
-- 2star
-- 3star
-- 4star
-- 5star (Viss retākais)
+- 1star 0% (Viss biežāk sastopams)
+- 2star 0%
+- 3star 94.3% (Krīt ja nenostrādā 4star vai 5star apstrāde)
+- 4star 5.1% (10 kastē garantēts)
+- 5star 0.6% (90 kastē garantēts) (Viss retākais)
+* izmantošu tikai 3, 4 un 5 zvaigzņu rarity, jo tikai šie krīt no kastēm.
 
-Mēs izmantosim tikai 3, 4 un 5 zvaigzņu rarity, jo tikai šie krīt no kastēm.
+![iespētējamība](bildes/iespējamība.png)
 
+* #### Pity noteikšana
+Pity, saucamais mīkstais garants, kad kautkādā momentā iespējamība dabūt 4star vai 5star palielinās, bet tā kā tas nav nekur pateikts konkrēti ar kādu griezienu sākas mikstias garanats, tapēc tiks paņemts apmēram vidējais
 
+- 3star (85.4%)
+- 4star (13% ar 7 griezienu)
+- 5star (1.6% ar 75 griezienu)
+
+#### sīkas deteļas
+* Ja 4star garants sakrīt ar 5star garantu, tad vispirms izkritīs 5star un tad 4star, īsi sakot 5 star ir prioritāte
+* katru reizi kad izkrīt 5star, tad automātiski tiek visi griezieni nogriezti uz 0, tad sākas skatīt pa jaunu.
+* būs iespēja griezat 1 vai 10 reizes
+* būs iespēja izvēlēties starp 2 banneriem, viens banners būs ar eventa lietu otrs būs standarta banners.
+## Kā cilvēks darbosies ar programmu.
+
+Cilvēks spēs izvēlēties kādu un cik reizes griezt banneri, tad nejauši skatili tiks izvēlēts kas viņam izkritīs un viņš to varēs redzēt(Kāds rarity,kāda lieta, lietas klase.) programma automātiski atmetīs atpakaļ spēlētāju pēc griežanas saglabājot statestiku.
