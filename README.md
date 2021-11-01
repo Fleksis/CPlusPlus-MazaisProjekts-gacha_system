@@ -1,48 +1,48 @@
-# Gačas sistēmas simulēšana.
+# Gachas sistēmas simulēšana.
 
-## 1. Kas ir gača sistēma?
+## 1. Kas ir gacha sistēma?
 
 #### Kā gacha sistēma strādā
-* Gača jeb "Gacha" ir veids kā spēlēs var kontrolēt cik ilgā laikā spēlētājs kautko dabūs, piemēram kā, xp, lvl up, items, rare items utt. Ar gaču daudzas spēļu kompanijas arī pelna naudu, lielākai daļai gaču spēlēm, gača strādā lai cilvēks mēģinātu dabūt kādu personāžu spēlē vai uz ļoti retām lietām kuras var dabūt tikai griežot gaču. Cilvēks krājot speciālu valūtu un ar to valūtu ver vaļā , lai dabūtu to reto spēles personāžu vai lietu. Gachai vēl ir tas saucamais "**garants**" ar kuru tu ar 100% iespēju dabūsi reto lietu, tas ir atkarīgs no tā cik daudz kastes esi atvēris vaļā. 
+* Gača jeb "Gacha" ir veids kā spēlēs var kontrolēt cik ilgā laikā spēlētājs kaut ko dabūs, piemēram kā, xp, level up progress, lietas, rare items utt. Ar gaču daudzas spēļu kompanijas arī pelna naudu, lielākai daļai gachas spēlēm, gacha strādā lai cilvēks mēģinātu dabūt kādu personāžu spēlē vai uz ļoti retām lietām kuras var dabūt tikai griežot gachu. Cilvēks krājot speciālu valūtu un ar to valūtu ver vaļā , lai dabūtu to reto spēles personāžu vai lietu. Gachai vēl ir tas saucamais "**garants**" ar kuru tu ar 100% iespēju dabūsi reto lietu, tas ir atkarīgs no tā cik daudz reizes tika verts vaļā.
 
-#### Kā izstrādātājs izmanto gacha sistēmu
-* Gachu katrs iztrādātājs var pielāgot pa sevam, lai cilvēkam vajaga ļoti daudz laika, lai tiktu līdz garantam un tajā pašā laikā var uztaisīt, lai dabūtu garantu vajadzēs patērēt mazāk laika. Bet daudzās spēlēs lai tiktu līdz garantam vajaga patērēt salīdzinoši daudz laika apmērām pusotrs mēnesis, bet tas ir kā kurā spēlē tas ir salikts.
+#### Kā izstrādātājs izmanto gachas sistēmu
+* Gachu katrs iztrādātājs var pielāgot pa savam, lai cilvēkam vajadzētu patērēt daudz vai maz laika, lai tiktu līdz garantam. Daudzās spēlēs, lai tiktu līdz garantam ir vajadzība patērēt salīdzinoši daudz laika aptuveni pusotrs mēnesis, bet tas ir kā kurā spēlē pielāgots.
 
-## 2. Kā mana simulēšana strādās?
+## 2. Kā mana simulēšana strādā?
 
 #### No kurienes tiks ņemts paraugs
- * Es ņemšu kā piemēru vienu spēli, kur šī gacha sistēma strādā salīdzinoši vienkārši, bet tur ir savas nianses. Pats paraugs tiks paņemts no pašas spēles kur viņi apraksta kā viņu gacha strādā.
+ * Es ņemšu kā paraugu vienu spēli, kurā šī gachas sistēma strādā salīdzinoši vienkārši, bet tur ir savas nianses. Pati gachas sistēma tiks ņemta no šīs spēles un tiks izmantots kā paraugs.
 
 #### Kā mana gacha simulēšana strādās
 * Sāksim ar to kādi ir rarity veidi:
-- 1star 0% (Viss biežāk sastopams)
-- 2star 0%
-- 3star 94.3% (Krīt ja nenostrādā 4star vai 5star apstrāde)
-- 4star 5.1% (10 kastē garantēts)
-- 5star 0.6% (90 kastē garantēts) (Viss retākais)
-* izmantošu tikai 3, 4 un 5 zvaigzņu rarity, jo tikai šie krīt no kastēm.
+- 1zvaigžņu 0% (Viss biežāk sastopams)
+- 2zvaigžņu 0%
+- 3zvaigžņu 94.3% (Krīt ja nenostrādā 4zvaigžņu vai 5zvaigžņu apstrāde)
+- 4zvaigžņu 5.1% (10 kastē garantēts)
+- 5zvaigžņu 0.6% (90 kastē garantēts) (Viss retākais)
+* izmantošu tikai 3, 4 un 5zvaigžņu rarity, jo tikai šie krīt no kastēm.
 
 ![iespētējamība](bildes/iespējamība.png)
 
 * #### Pity noteikšana
-Pity, saucamais mīkstais garants, kad kaut kādā momentā iespējamība dabūt 4star vai 5star palielinās, bet tā kā tas nav nekur pateikts konkrēti ar kādu griezienu sākas mīkstais garants, tapēc tiks paņemts apmēram vidējais rādītājs.
+Pity, saucamais mīkstais garants, kad kaut kādā momentā iespējamība dabūt 4zvaigžņu vai 5zvaigžņu lietu palielinās, bet tā kā tas nav nekur pateikts konkrēti ar kādu griezienu sākas mīkstais garants, tapēc tiks paņemts apmēram vidējais rādītājs.
 
-- 3star (85.4%)
-- 4star (13% ar 7 Griezienu)
-- 5star (1.6% ar 75 Griezienu)
+- 3zvaigžņu (85.4%)
+- 4zvaigžņu (13% ar 7 Griezienu)
+- 5zvaigžņu (1.6% ar 75 Griezienu)
 
 #### Sīkākas detaļas
-- Ja 4star garants sakrīt ar 5star garantu, tad prioritātē izkritīs 5star un nākošaja grizienā 4star.
-- katru reizi kad izkrīt 5star, tad automātiski tiek visi griezieni nogriezti uz 0, tad sākas skaitīt par jaunu.
+- Ja 4zvaigžņu garants sakrīt ar 5zvaigžņu garantu, tad prioritātē izkritīs 5zvaigžņu lieta un nākošaja griezienā arī ir 4zvaigžņu lietas garants.
+- katru reizi kad izkrīt 5zvaigžņu lieta, tad automātiski tiek garanta skaitlis restartēts uz 0, tad sāk skaitīt garantu par jaunu.
 - būs iespēja izvēlēties griezt 1 vai 10 reizes.
-- būs dota izvēle starp 2 banneriem, viens banners būs ar noteiktu lietu ko varēs dabūt tikai šajā banneri, bet otrs standarta banners būs tikai ar standarta lietām
-- Tiks izmantotas in-game lietas, personāži un lietas.
+- būs dota izvēle starp 2 banneriem, viens banners būs ar noteiktu lietu ko varēs dabūt tikai konkrētajā eventa bannerī, bet otrs būs standarta banners kurš ir tikai ar standarta lietām.
+- Tiks izmantotas in-game lietu nosaukumi.
 
 ## 3. Eventa banners
-* Eventa banners sevī satur īpašu lietu kā personāžu vai unikalu lietu ar specifisku spēju.
-* Eventa bannerī kritīs viss kas krīt no standarta bannera, bet klāt nāks viens 5star, kuru var dabūt tikai eventa banneri.
-* kad cilvēkam pirmo reizi izkritīs 5star būs 50/50 iespēja, ka izkritīs tieši eventa lieta, bet kad jau otro reizi izkrīt 5star tad ar 100% iespēju izkritīs eventa lieta.
+* Eventa banners sevī satur īpašas lietas vai pesonāžus.
+* Eventa bannerī kritīs viss kas ir standarta bannerī, bet klāt nāks viens 5zvaigžņu lieta, kuru varēs dabūt tikai eventa bannerī.
+* kad cilvēkam pirmo reizi izkritīs 5zvaigžņu lieta no eventa banner, tad būs 50/50 iespēja, ka izkritīs tieši eventa bannera īpašā lieta, bet kad izkrītīs otro reizi 5zvaigžņu lieta, tad jau būs 100% iespēja dabūt īpašo eventa bannera lieta. kad tiek dabūts eventa īpašā lieta, tad nākošajā 5zvaigžņu lietas kritienā iespēja atkal dabūt īpašo 5zvaigžņu lietu kļūs atkal 50/50.
 
 ## 4. Kā cilvēks darbosies ar programmu.
 
-Cilvēks spēs izvēlēties kādu un cik reizes griezt banneri, tad nejauši tiks izvēlēts skaitlis, kas viņam izkritīs un viņš to varēs redzēt(Kāds rarity,kāda lieta, lietas klase.) programma automātiski atmetīs atpakaļ spēlētāju pēc griežanas saglabājot statistiku.
+Cilvēks spēs izvēlēties kādu un cik reizes griezt banneri, tad nejaušā veidā tiks noteikts kas izkritīs un to kas izkritīs varēs redzēt: **(Kāds rarity, kāda lieta, lietas klase)**. Programma saglabā statistiku, kamēr programma ir atverta.
