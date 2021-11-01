@@ -25,7 +25,7 @@
 ![iespētējamība](bildes/iespējamība.png)
 
 * #### Pity noteikšana
-Pity, saucamais mīkstais garants, kad kautkādā momentā iespējamība dabūt 4star vai 5star palielinās, bet tā kā tas nav nekur pateikts konkrēti ar kādu griezienu sākas mīkstais garants, tapēc tiks paņemts apmēram vidējais rādītājs.
+Pity, saucamais mīkstais garants, kad kaut kādā momentā iespējamība dabūt 4star vai 5star palielinās, bet tā kā tas nav nekur pateikts konkrēti ar kādu griezienu sākas mīkstais garants, tapēc tiks paņemts apmēram vidējais rādītājs.
 
 - 3star (85.4%)
 - 4star (13% ar 7 Griezienu)
