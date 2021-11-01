@@ -31,7 +31,7 @@ Pity, saucamais mīkstais garants, kad kautkādā momentā iespējamība dabūt 
 - 4star (13% ar 7 griezienu)
 - 5star (1.6% ar 75 griezienu)
 
-#### sīkas deteļas
+#### Sīkākas detaļas
 - Ja 4star garants sakrīt ar 5star garantu, tad prioritātē izkritīs 5star un nākošaja grizienā 4star.
 - katru reizi kad izkrīt 5star, tad automātiski tiek visi griezieni nogriezti uz 0, tad sākas skatīt pa jaunu.
 - būs iespēja izvēlēties griezt 1 vai 10 reizes.
