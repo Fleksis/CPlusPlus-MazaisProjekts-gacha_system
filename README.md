@@ -32,10 +32,18 @@ Pity, saucamais mīkstais garants, kad kautkādā momentā iespējamība dabūt 
 - 5star (1.6% ar 75 griezienu)
 
 #### sīkas deteļas
-* Ja 4star garants sakrīt ar 5star garantu, tad vispirms izkritīs 5star un tad 4star, īsi sakot 5 star ir prioritāte
-* katru reizi kad izkrīt 5star, tad automātiski tiek visi griezieni nogriezti uz 0, tad sākas skatīt pa jaunu.
-* būs iespēja griezat 1 vai 10 reizes
-* būs iespēja izvēlēties starp 2 banneriem, viens banners būs ar eventa lietu otrs būs standarta banners.
-## Kā cilvēks darbosies ar programmu.
+- Ja 4star garants sakrīt ar 5star garantu, tad prioritātē izkritīs 5star un nākošaja grizienā 4star.
+- katru reizi kad izkrīt 5star, tad automātiski tiek visi griezieni nogriezti uz 0, tad sākas skatīt pa jaunu.
+- būs iespēja izvēlēties griezt 1 vai 10 reizes.
+- būs dota izvēle starp 2 banneriem, viens banners būs ar noteiktu lietu ko varēs dabūt tikai šajā banneri, bet otrs standarta banners būs tikai ar standarta lietām
+- Tiks izmantotas spēles in game lietas, personāži un lietas.
+
+## 3. Eventa banners
+* Eventa banners sevī satur īpašu lietu kā personāžu vai unikalu lietu ar specifisku spēju.
+* Eventa bannerī kritīs viss kas krīt no standarta bannera, bet klāt nāks viens 5star kuru var dabū tikai eventa banneri
+* kad cilvēkam pirmo reizi izkritīs 5star būs 50/50 iespēja ka izkritīs tieši eventa lieta, bet kad jau otro reizi izkrīt 5star tad ar 100% iespēju izkritīs eventa lieta.
+
+## 4. Kā cilvēks darbosies ar programmu.
 
 Cilvēks spēs izvēlēties kādu un cik reizes griezt banneri, tad nejauši skatili tiks izvēlēts kas viņam izkritīs un viņš to varēs redzēt(Kāds rarity,kāda lieta, lietas klase.) programma automātiski atmetīs atpakaļ spēlētāju pēc griežanas saglabājot statestiku.
+
