@@ -12,13 +12,13 @@ S_5star: 5star Garanta skaits
 wish_stop: ar vārdu "stop" vai "Stop" tiks apstādināta programma
 */
 int softPity3(int iespejamiba3){
-  int star3Soft = 66;
-  iespejamiba3 = iespejamiba3 - star3Soft;
+  int star3Soft = 43;
+  iespejamiba3 = iespejamiba3 + star3Soft;
   return iespejamiba3;
 }
 
 int softPity5(int iespejamiba5){
-  int star5Soft = 66;
+  int star5Soft = 43;
   iespejamiba5 = iespejamiba5 + star5Soft;
   return iespejamiba5;
 }
@@ -26,7 +26,7 @@ int softPity5(int iespejamiba5){
 
 int main()
 {
-    int S_wish = 0, S_4star = 1, S_5star = 0;//Standarta bannera garanta skatiļi
+    int S_wish = 70, S_4star = 1, S_5star = 0;//Standarta bannera garanta skatiļi
     int E_wish = 0, E_4star = 0, E_5star = 0;//Eventa bannera garanta skatiļi
     int S_3starSkaits = 0, S_4starSkaits = 0, S_5starSkaits = 0; //Statestika
     int iespejamiba3 = 148, iespejamiba5 = 17;
@@ -49,15 +49,16 @@ int main()
           break;
         }
         else if (wish_izvele == "Standart" || wish_izvele == "standart" || wish_izvele == "s"){
-            std::cout << "Cik daudz tu gribi wishot (1 vai 10): ";
-            std::cin >> D_wish;
+            //std::cout << "Cik daudz tu gribi wishot (1 vai 10): ";
+            D_wish = 1;
             if (D_wish == 1){
                 P_number = rand() % 1000 + 1;
                 std::cout << P_number << std::endl;
+                // P_number = 1000;
+                // std::cout << "Ievadi skaitli: " << P_number << std::endl;
 
                 //std::cout << "Ievadi skaitli: ";
                 //std::cin >> P_number;
-
                 S_wish = S_wish + 1;
 
                 if (S_wish <= 74){
@@ -102,6 +103,7 @@ int main()
                 else if (S_wish >= 75 && S_wish <= 89){
                     iespejamiba3 = softPity3(iespejamiba3);
                     iespejamiba5 = softPity5(iespejamiba5);
+                    std::cout << iespejamiba3 << std::endl << iespejamiba5 << std::endl;
                     if (P_number <= 16 && S_4star == 10) {
                         S_wish = 1;
                         S_5star = 1;
@@ -124,19 +126,22 @@ int main()
                             S_5starSkaits = S_5starSkaits + 1;
                             continue;
                         }
-                        else if (P_number >= 17 && P_number <= 147) {
+                        else if (P_number >= iespejamiba3 && P_number <= iespejamiba5) {
                             std::cout << "4star " << S_wish << "\n\n";
                             S_4star = 1;
                             S_5star = S_5star + 1;
                             S_4starSkaits = S_4starSkaits + 1;
                             continue;
                         }
-                        else if (P_number <= iespejamiba3) {
+                        else if (P_number >= iespejamiba3 || P_number <= 869) {
                             std::cout << "3star " << S_wish << "\n\n";
                             S_4star = S_4star + 1;
                             S_5star = S_5star + 1;
                             S_3starSkaits = S_3starSkaits + 1;
                             continue;
+                        }
+                        else {
+                          std::cout << "errors kaut kāds";
                         }
                     }
                 }
@@ -154,3 +159,5 @@ int main()
     }
     return 0;
 }
+
+//salabot soft pity.
