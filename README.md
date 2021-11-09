@@ -46,3 +46,5 @@ Pity, saucamais mīkstais garants, kad kaut kādā momentā iespējamība dabūt
 ## 4. Kā cilvēks darbosies ar programmu.
 
 Cilvēks spēs izvēlēties kādu un cik reizes griezt banneri, tad nejaušā veidā tiks noteikts kas izkritīs un to kas izkritīs varēs redzēt: **(Kāds rarity, kāda lieta, lietas klase)**. Programma saglabā statistiku, kamēr programma ir atverta.
+
+Cilvēks varēs programmu palaist caur [replit.com](https://replit.com/@DP3MMisins/CPlusPlus-MazaisProjekts-gachasystem#main) vai patstāvīgi kaut kā, ja vēlēsies.

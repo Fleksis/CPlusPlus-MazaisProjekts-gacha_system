@@ -26,7 +26,7 @@ int softPity5(int iespejamiba5){
 
 int main()
 {
-    int S_wish = 70, S_4star = 1, S_5star = 0;//Standarta bannera garanta skatiļi
+    int S_wish = 0, S_4star = 1, S_5star = 0;//Standarta bannera garanta skatiļi
     int E_wish = 0, E_4star = 0, E_5star = 0;//Eventa bannera garanta skatiļi
     int S_3starSkaits = 0, S_4starSkaits = 0, S_5starSkaits = 0; //Statestika
     int iespejamiba3 = 148, iespejamiba5 = 17;
@@ -37,8 +37,8 @@ int main()
 
     srand((unsigned int)time(NULL));
 
-    while (wish_stop != "stop" || "Stop") {
-        std::cout << "Ievadi kādu banneri tu gribi wishot (Standart vai Event) : ";
+    while (wish_stop != "stop" || wish_stop == "Stop") {
+        std::cout << "Ievadi kādu banneri tu gribi wishot (Standart vai Event): ";
         std::cin >> wish_izvele;
         wish_stop = wish_izvele;
         if (wish_stop == "stop" || wish_stop == "Stop") {
@@ -49,11 +49,11 @@ int main()
           break;
         }
         else if (wish_izvele == "Standart" || wish_izvele == "standart" || wish_izvele == "s"){
-            //std::cout << "Cik daudz tu gribi wishot (1 vai 10): ";
-            D_wish = 1;
+            std::cout << "Cik daudz tu gribi wishot (1 vai 10): ";
+            std::cin >> D_wish;
             if (D_wish == 1){
                 P_number = rand() % 1000 + 1;
-                std::cout << P_number << std::endl;
+                // std::cout << P_number << std::endl;
                 // P_number = 1000;
                 // std::cout << "Ievadi skaitli: " << P_number << std::endl;
 
@@ -103,7 +103,7 @@ int main()
                 else if (S_wish >= 75 && S_wish <= 89){
                     iespejamiba3 = softPity3(iespejamiba3);
                     iespejamiba5 = softPity5(iespejamiba5);
-                    std::cout << iespejamiba3 << std::endl << iespejamiba5 << std::endl;
+                    //std::cout << iespejamiba3 << std::endl << iespejamiba5 << std::endl;
                     if (P_number <= 16 && S_4star == 10) {
                         S_wish = 1;
                         S_5star = 1;
@@ -155,9 +155,12 @@ int main()
                   std::cout << "Kaut kas salūza!";
                 }
             }
+            else if (D_wish != 1 || D_wish != 10){
+                std::cout << "Tika ievadīts nepareiz sakaitlis, lūdzu ievadiet velreiz:  \n\n";
+                D_wish = 0;
+                continue;
+            }
         }
     }
     return 0;
 }
-
-//salabot soft pity.
