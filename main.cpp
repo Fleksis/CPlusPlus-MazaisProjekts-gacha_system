@@ -1,16 +1,6 @@
 #include <iostream>
 #include <string>
 
-
-/*
-S_wish: Standarta wish
-S_4star: 4star Garanta skaits
-S_5star: 5star Garanta skaits
-
-
-
-wish_stop: ar vārdu "stop" vai "Stop" tiks apstādināta programma
-*/
 int softPity3(int iespejamiba3){
   int star3Soft = 43;
   iespejamiba3 = iespejamiba3 + star3Soft;
@@ -26,6 +16,24 @@ int softPity5(int iespejamiba5){
 
 int main()
 {
+    /*
+    /Standarta banners\
+    S_wish: Standarta wish
+    S_4star: 4star Garanta skaits.
+    S_5star: 5star Garanta skaits.
+
+    /Statistika\
+    S_3starSkaits: Cik daudz izkrita 3 star lietas pa 1 sesiju.
+    S_4starSkaits: Cik daudz izkrita 4 star lietas pa 1 sesiju.
+    S_5starSkaits: Cik daudz izkrita 5 star lietas pa 1 sesiju.
+
+    /Iespējamība\
+    iespejamiba3: programmā tiek norādīts sākotnējā iespējamība dabūt 3star lietu, kur pēc tam tiks mainīta
+    iespejamiba5: programmā tiek norādīts sākotnējā iespējamība dabūt 5star lietu, kur pēc tam tiks mainīta
+
+    wish_stop: Cilvēks ievadot vārdu "stop" vai "Stop" tiks apstādināta programma un izvadīs statistiku 
+    wish_izvele: Cilvēka izvēle kāds banners tiks verts vaļā.
+    */
     int S_wish = 0, S_4star = 1, S_5star = 0;//Standarta bannera garanta skatiļi
     int E_wish = 0, E_4star = 0, E_5star = 0;//Eventa bannera garanta skatiļi
     int S_3starSkaits = 0, S_4starSkaits = 0, S_5starSkaits = 0; //Statestika
@@ -51,6 +59,7 @@ int main()
         else if (wish_izvele == "Standart" || wish_izvele == "standart" || wish_izvele == "s"){
             std::cout << "Cik daudz tu gribi wishot (1 vai 10): ";
             std::cin >> D_wish;
+            //D_wish = 1;
             if (D_wish == 1){
                 P_number = rand() % 1000 + 1;
                 // std::cout << P_number << std::endl;
@@ -147,6 +156,8 @@ int main()
                 }
                 else if(S_wish == 90) {
                   std::cout << "Apsveicu, tu dabuju 5star characteri! " << S_wish << "\n\n";
+                  iespejamiba3 = 148;
+                  iespejamiba5 = 17;
                   S_5starSkaits = S_5starSkaits + 1;
                   S_wish = 0;
                   continue;
