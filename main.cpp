@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-/* To Do list(1.done+- / 2. / 3. / 4. / 5.done)
+/* To Do list(1.done+- / 2. / 3. / 4. / 5.done / 6.)
 1. garanta pārbaudi var izdarīt tā, lai pārbauda vienu reizi koda sākumā, savādāk atkārtojas 4 reizes viens un tas pats
 2. Pārbaudīt visus sazarojumus, jo ir sazarojumi kurus var noīsināt!
 3. Pārbaudīt vairākas reizes mīkstā garanta matemātisko stāvokli, savādāk plīst pušu visu laiku
@@ -184,47 +184,45 @@ int main()
                 P_number = totalsRandoms(P_number);
                 //std::cout << P_number << std::endl;
                 S_wish = S_wish + 1;
+                if (P_number <= 6 && S_4star == 10) {
+                    iespejamiba3 = 148;
+                    iespejamiba5 = 17;
+                    S_5starSkaits = S_5starSkaits + 1;
+                    k = rand() % 2 + 1;
+                    switch(k){
+                        case 1:
+                            std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        case 2:
+                            std::cout << "5 starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        default:
+                            number_of_error++;
+                            std::cout << "Switch error" << std::endl << std::endl;
+                            break;
+                    }
+                    S_wish = 1;
+                    continue;
+                }
+                else if (S_4star == 10) {
+                    S_4star = 1;
+                    S_4starSkaits = S_4starSkaits + 1;
+                    k = rand() % 2 + 1;
+                    switch(k){
+                        case 1:
+                            std::cout << "4 starGarants: " << WepIzvele_4(Wep_4) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        case 2:
+                            std::cout << "4 starGarants: " <<  CharIzvele_4(Char_4) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        default:
+                            number_of_error++;
+                            std::cout << "Switch error" << std::endl << std::endl;
+                            break;
+                    }
+                    continue;
+                }
                 if (S_wish <= 74){
-                    if (P_number <= 6 && S_4star == 10) {
-                        iespejamiba3 = 148;
-                        iespejamiba5 = 17;
-                        S_5starSkaits = S_5starSkaits + 1;
-                        k = rand() % 2 + 1;
-                        switch(k){
-                            case 1:
-                                std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            case 2:
-                                std::cout << "5 starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            default:
-                                number_of_error++;
-                                std::cout << "Switch error" << std::endl << std::endl;
-                                break;
-                        }
-                        S_wish = 1;
-                        continue;
-                    }
-                    else if (S_4star == 10) {
-                        S_4star = 1;
-                        S_4starSkaits = S_4starSkaits + 1;
-
-                        k = rand() % 2 + 1;
-                        switch(k){
-                            case 1:
-                                std::cout << "4 star: " << WepIzvele_4(Wep_4) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            case 2:
-                                std::cout << "4 star: " <<  CharIzvele_4(Char_4) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            default:
-                                number_of_error++;
-                                std::cout << "Switch error" << std::endl << std::endl;
-                                break;
-                        }
-                        continue;
-                    }
-
                     if (P_number <= 6){
                         iespejamiba3 = 148;
                         iespejamiba5 = 17;
@@ -276,44 +274,7 @@ int main()
                     iespejamiba5 = softPity5(iespejamiba5);
                     // std::cout << "Chance3: " << iespejamiba3 << std::endl << "Chance5: " << iespejamiba5 << std::endl;
                     std::cout << "Chance: " << (1000 - iespejamiba3) + iespejamiba5 << std::endl;
-                    if (P_number <= 16 && S_4star == 10) {
-                        iespejamiba3 = 148;
-                        iespejamiba5 = 17;
-                        S_5starSkaits = S_5starSkaits + 1;
-                        k = rand() % 2 + 1;
-                        switch(k){
-                            case 1:
-                                std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            case 2:
-                                std::cout << "5 starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            default:
-                                number_of_error++;
-                                std::cout << "Switch error" << std::endl << std::endl;
-                                break;
-                        }
-                        S_wish = 1;
-                        continue;
-                    }
-                    else if (S_4star == 10) {
-                        S_4star = 1;
-                        S_4starSkaits = S_4starSkaits + 1;
-                        k = rand() % 2 + 1;
-                        switch(k){
-                            case 1:
-                                std::cout << "4 star: " <<  WepIzvele_4(Wep_4) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            case 2:
-                                std::cout << "4 star: " <<  CharIzvele_4(Char_4) << " " << S_wish << std::endl << std::endl;
-                                break;
-                            default:
-                                number_of_error++;
-                                std::cout << "Switch error" << std::endl << std::endl;
-                        }
-                        continue;
-                    }
-                    else if (P_number <= iespejamiba5){
+                    if (P_number <= iespejamiba5){
                         iespejamiba3 = 148;
                         iespejamiba5 = 17;
                         S_4star = S_4star + 1;
@@ -393,46 +354,46 @@ int main()
                     P_number = totalsRandoms(P_number);
                     //std::cout << P_number << std::endl;
                     S_wish = S_wish + 1;
+                                    if (P_number <= 6 && S_4star == 10) {
+                    iespejamiba3 = 148;
+                    iespejamiba5 = 17;
+                    S_5starSkaits = S_5starSkaits + 1;
+                    k = rand() % 2 + 1;
+                    switch(k){
+                        case 1:
+                            std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        case 2:
+                            std::cout << "5 starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish << std::endl << std::endl;
+                            break;
+                        default:
+                            number_of_error++;
+                            std::cout << "Switch error" << std::endl << std::endl;
+                            break;
+                    }
+                    S_wish = 1;
+                    continue;
+                }
+                else if (S_4star == 10) {
+                    S_4star = 1;
+                    S_4starSkaits = S_4starSkaits + 1;
+                    k = rand() % 2 + 1;
+                    switch(k){
+                            case 1:
+                                std::cout << "4 starGarants: " << WepIzvele_4(Wep_4) << " " << S_wish << std::endl << std::endl;
+                                break;
+                            case 2:
+                                std::cout << "4 starGarants: " <<  CharIzvele_4(Char_4) << " " << S_wish << std::endl << std::endl;
+                                break;
+                            default:
+                                number_of_error++;
+                                std::cout << "Switch error" << std::endl << std::endl;
+                                break;
+                        }
+                        continue;
+                    }
                     if (S_wish <= 74){
-                        if (P_number <= 6 && S_4star == 10) {
-                            iespejamiba3 = 148;
-                            iespejamiba5 = 17;
-                            S_5starSkaits = S_5starSkaits + 1;
-                            k = rand() % 2 + 1;
-                            switch(k){
-                                case 1:
-                                    std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
-                                    break;
-                                case 2:
-                                    std::cout << "5starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                default:
-                                    number_of_error++;
-                                    std::cout << "Switch error" << std::endl << std::endl;
-                                    break;
-                            }
-                            S_wish = 1;
-                            continue;
-                        }
-                        else if (S_4star == 10) {
-                            S_4star = 1;
-                            S_4starSkaits = S_4starSkaits + 1;
-                            k = rand() % 2 + 1;
-                            switch(k){
-                                case 1:
-                                    std::cout << "4 starGarants: " <<  WepIzvele_4(Wep_4) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                case 2:
-                                    std::cout << "4 starGarants: " <<  CharIzvele_4(Char_4) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                default:
-                                    number_of_error++;
-                                    std::cout << "Switch error" << std::endl << std::endl;
-                                    break;
-                            }
-                            continue;
-                        }
-                        else if (P_number <= 6){
+                        if (P_number <= 6){
                             iespejamiba3 = 148;
                             iespejamiba5 = 17;
                             S_4star = S_4star + 1;
@@ -483,45 +444,7 @@ int main()
                         iespejamiba5 = softPity5(iespejamiba5);
                         // std::cout << "Chance3: " << iespejamiba3 << std::endl << "Chance5: " << iespejamiba5 << std::endl;
                         std::cout << "Chance: " << (1000 - iespejamiba3) + iespejamiba5 << std::endl;
-                        if (P_number <= iespejamiba5 && S_4star == 10) {
-                            iespejamiba3 = 148;
-                            iespejamiba5 = 17;
-                            S_5starSkaits = S_5starSkaits + 1;
-                            k = rand() % 2 + 1;
-                            switch(k){
-                                case 1:
-                                    std::cout << "5 starWep: " <<  WepIzvele_5(Wep_5) << " " << S_wish << std::endl << std::endl;
-                                    break;
-                                case 2:
-                                    std::cout << "5starChar: " <<  CharIzvele_5(Char_5) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                default:
-                                    number_of_error++;
-                                    std::cout << "Switch error" << std::endl << std::endl;
-                                    break;
-                            }
-                            S_wish = 1;
-                            continue;
-                        }
-                        else if (S_4star == 10) {
-                            S_4star = 1;
-                            S_4starSkaits = S_4starSkaits + 1;
-                            k = rand() % 2 + 1;
-                            switch(k){
-                                case 1:
-                                    std::cout << "4 star: " <<  WepIzvele_4(Wep_4) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                case 2:
-                                    std::cout << "4 star: " <<  CharIzvele_4(Char_4) << " " << S_wish  << std::endl << std::endl;
-                                    break;
-                                default:
-                                    number_of_error++;
-                                    std::cout << "Switch error" << std::endl << std::endl;
-                                    break;
-                            }
-                            continue;
-                        }
-                        else if (P_number <= iespejamiba5){
+                        if (P_number <= iespejamiba5){
                             iespejamiba3 = 148;
                             iespejamiba5 = 17;
                             S_4star = S_4star + 1;
