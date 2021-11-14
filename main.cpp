@@ -420,10 +420,10 @@ int main()
                             k = rand() % 2 + 1;
                             switch(k){
                                 case 1:
-                                    std::cout << "4 star: " <<  WepIzvele_4(Wep_4) << " " << S_wish  << std::endl << std::endl;
+                                    std::cout << "4 starGarants: " <<  WepIzvele_4(Wep_4) << " " << S_wish  << std::endl << std::endl;
                                     break;
                                 case 2:
-                                    std::cout << "4 star: " <<  CharIzvele_4(Char_4) << " " << S_wish  << std::endl << std::endl;
+                                    std::cout << "4 starGarants: " <<  CharIzvele_4(Char_4) << " " << S_wish  << std::endl << std::endl;
                                     break;
                                 default:
                                     number_of_error++;
